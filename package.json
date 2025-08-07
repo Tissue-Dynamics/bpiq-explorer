@@ -6,12 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "scrape": "tsx scripts/scrape-historical-data.ts"
   },
   "dependencies": {
-    "next": "15.4.6",
-    "react": "^18",
-    "react-dom": "^18",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-alert-dialog": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.1",
@@ -30,6 +28,9 @@
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
     "lucide-react": "^0.427.0",
+    "next": "15.4.6",
+    "react": "^18",
+    "react-dom": "^18",
     "tailwind-merge": "^2.5.0",
     "tailwindcss-animate": "^1.0.7"
   },
@@ -40,6 +41,7 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8",
     "tailwindcss": "^3.4.11",
+    "tsx": "^4.20.3",
     "typescript": "^5"
   }
 }
