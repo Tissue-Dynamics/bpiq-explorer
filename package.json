@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "scrape": "tsx scripts/scrape-historical-data.ts"
+    "scrape": "tsx scripts/scrape-historical-data.ts",
+    "import": "tsx scripts/import-to-postgres.ts",
+    "db:setup": "psql -U postgres -d bpiq -f scripts/postgres-schema.sql"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.0",
@@ -24,11 +26,13 @@
     "@radix-ui/react-toast": "^1.2.1",
     "@tanstack/react-query": "^5.52.0",
     "@tanstack/react-table": "^8.20.5",
+    "@types/pg": "^8.15.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
     "lucide-react": "^0.427.0",
     "next": "15.4.6",
+    "pg": "^8.16.3",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.5.0",
