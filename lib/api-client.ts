@@ -5,8 +5,8 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "https://api.bpiq.c
 class BPIQApiClient {
   private apiKey: string
 
-  constructor() {
-    this.apiKey = process.env.BPIQ_API_KEY || ""
+  constructor(apiKey?: string) {
+    this.apiKey = apiKey || process.env.BPIQ_API_KEY || ""
   }
 
   private async fetch<T>(endpoint: string, params?: URLSearchParams): Promise<T> {
